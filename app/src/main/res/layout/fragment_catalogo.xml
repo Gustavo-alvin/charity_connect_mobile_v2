@@ -3,14 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#161B22"
     tools:context=".fragments.CatalogoFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="100dp"
+        android:id="@+id/titulo_catalogo"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Catalogo"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:textSize="20sp"
-        android:text="Catalogo" />
+        android:layout_marginTop="70dp"
+        android:src="@tools:sample/avatars"
+        tools:src="@drawable/shortlogobranca" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_view_background"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search"
+            android:layout_margin="16dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+    </RelativeLayout>
 
 </FrameLayout>

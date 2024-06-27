@@ -2,16 +2,19 @@ package com.inf3fm.elden.charityconnect.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
 import com.inf3fm.elden.charityconnect.R;
 import com.inf3fm.elden.charityconnect.fragments.CatalogoFragment;
 import com.inf3fm.elden.charityconnect.fragments.HomeFragment;
 import com.inf3fm.elden.charityconnect.fragments.MenuFragment;
+import android.os.Bundle;
+import android.widget.SearchView;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +23,24 @@ public class MainActivity extends AppCompatActivity {
     private CatalogoFragment catalogoFragment;
     private MenuFragment menuFragment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SearchView searchView = findViewById(R.id.search_view);
+
+        // Acessar e personalizar o campo de texto do SearchView
+        try {
+            Field searchTextViewField = SearchView.class.getDeclaredField("mSearchSrcTextView");
+            searchTextViewField.setAccessible(true);
+            TextView searchTextView = (TextView) searchTextViewField.get(searchView);
+            searchTextView.setTextColor(getResources().getColor(android.R.color.white));
+            searchTextView.setHintTextColor(getResources().getColor(android.R.color.white));
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
         buttonHome = findViewById(R.id.buttonHome);
         buttonCatalogo = findViewById(R.id.buttonCatalogo);
@@ -70,4 +87,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }
