@@ -23,24 +23,15 @@ public class MainActivity extends AppCompatActivity {
     private CatalogoFragment catalogoFragment;
     private MenuFragment menuFragment;
 
+    private SearchView searchView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SearchView searchView = findViewById(R.id.search_view);
 
-        // Acessar e personalizar o campo de texto do SearchView
-        try {
-            Field searchTextViewField = SearchView.class.getDeclaredField("mSearchSrcTextView");
-            searchTextViewField.setAccessible(true);
-            TextView searchTextView = (TextView) searchTextViewField.get(searchView);
-            searchTextView.setTextColor(getResources().getColor(android.R.color.white));
-            searchTextView.setHintTextColor(getResources().getColor(android.R.color.white));
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
 
         buttonHome = findViewById(R.id.buttonHome);
         buttonCatalogo = findViewById(R.id.buttonCatalogo);
