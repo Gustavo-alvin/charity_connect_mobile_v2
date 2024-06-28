@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#161B22"
     tools:context=".fragments.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="137dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/shortlogobranca" />
+
+
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:textSize="20sp"
-        android:text="Home" />
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="108dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="30dp"
+        android:text="Charity Connect"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:typeface="sans" />
 
 </FrameLayout>

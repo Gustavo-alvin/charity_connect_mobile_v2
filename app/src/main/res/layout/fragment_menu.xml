@@ -11,7 +11,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:textSize="20sp"
-        android:text="Menu" />
+        android:text="Menu"
+        android:textSize="20sp" />
 
 </FrameLayout>
