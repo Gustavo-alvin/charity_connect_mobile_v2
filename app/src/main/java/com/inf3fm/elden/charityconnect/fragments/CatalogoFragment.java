@@ -2,20 +2,26 @@ package com.inf3fm.elden.charityconnect.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.inf3fm.elden.charityconnect.R;
+
+import java.lang.reflect.Field;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link CatalogoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CatalogoFragment extends Fragment {
+public class CatalogoFragment extends Fragment  {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,6 +57,7 @@ public class CatalogoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -61,6 +68,35 @@ public class CatalogoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_catalogo, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_catalogo, container, false);
+
+
+        return view;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Encontrar o SearchView pelo ID dentro do layout do fragmento
+        SearchView searchView = view.findViewById(R.id.search_view);
+
+        // Configurar o SearchView conforme necessário
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // Ação quando o usuário submeter a query
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // Ação quando o texto da query é alterado
+                return false;
+            }
+        });
+    }
+
+
 }
