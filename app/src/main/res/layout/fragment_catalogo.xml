@@ -41,15 +41,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/search_view_background"
+        android:background="@color/car_ui_list_item_divider"
         android:iconifiedByDefault="false"
-        android:queryHint="Search"
+        android:queryHint="Pesquisar"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="16dp" />
+        app:layout_constraintMarginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
 
     <!-- CardView com itens divididos lado a lado -->
     <androidx.cardview.widget.CardView
@@ -95,7 +95,7 @@
                     android:id="@+id/text_view_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Item 1"
+                    android:text="Sorrisos do Amanhã"
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +118,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/your_image_2"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +128,7 @@
                     android:id="@+id/text_view_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Item 2"
+                    android:text="Mãos Solidárias"
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +137,11 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
         </LinearLayout>
+
+
 
     </androidx.cardview.widget.CardView>
 
