@@ -24,7 +24,7 @@
 
     <!-- Logo do aplicativo -->
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/buttonLogo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
@@ -46,7 +46,7 @@
         app:circularflow_radiusInDP="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
+        app:layout_constraintTop_toBottomOf="@id/buttonLogo" />
 
     <!-- CardView com itens divididos lado a lado -->
     <androidx.cardview.widget.CardView
@@ -116,6 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/ongs_03"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -211,6 +212,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/ongs_08"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

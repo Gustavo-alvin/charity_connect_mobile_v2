@@ -24,7 +24,7 @@
 
     <!-- Logo do aplicativo -->
 
-    <?xml version="1.0" encoding="utf-8"?>
+    
 
     <ImageView
         android:id="@+id/imageView2"
@@ -141,3 +141,4 @@
 
 
 </FrameLayout>
+
