@@ -239,5 +239,17 @@
 
     </androidx.cardview.widget.CardView>
 
+    <ScrollView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        tools:layout_editor_absoluteX="361dp"
+        tools:layout_editor_absoluteY="132dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
