@@ -15,6 +15,9 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.lang.reflect.Field;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -78,5 +81,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        // Adicione suas imagens aqui
+        int[] images = {R.drawable.image1, R.drawable.image2, R.drawable.image3};
+        ImageAdapter adapter = new ImageAdapter(this, images);
+        viewPager.setAdapter(adapter);
+    }
+}
 
 }
