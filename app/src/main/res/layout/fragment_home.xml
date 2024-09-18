@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+
+<FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#161B22"
@@ -28,16 +36,6 @@
         android:textStyle="bold"
         android:typeface="sans" />
 
-    <ImageView
-        android:id="@+id/imagemeu2"
-        android:layout_width="412dp"
-        android:layout_height="220dp"
-        android:layout_marginVertical="110dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/blogculturadedoacao_removebg_preview" />
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -60,6 +58,19 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
+
     </androidx.cardview.widget.CardView>
 
+    <ImageView
+        android:id="@+id/imagemeu2"
+        android:layout_width="412dp"
+        android:layout_height="300dp"
+        android:layout_marginVertical="600dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/blogculturadedoacao_removebg_preview" />
+
 </FrameLayout>
+
+</androidx.core.widget.NestedScrollView>
