@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#11161d">  <!-- Fundo azul escuro -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formulário para Contato"
+        android:gravity="center"
+        android:textSize="70sp"
+        android:fontFamily="@font/lexend_semibold"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="24dp"
+        android:textColor="#707bff"
+        android:backgroundTint="#707bff"
+        android:fontFamily="@font/lexend_semibold"
+        android:textSize="40sp"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o Motivo do Contato"
+        android:textColorHint="#BFFFFFFF" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:backgroundTint="#707bff"
+        android:fontFamily="@font/lexend_semibold"
+        android:hint="Digite sua pergunta"
+        android:paddingBottom="16dp"
+        android:textColor="#707bff"
+        android:textColorHint="#BFFFFFFF"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu nome"
+        android:textColorHint="#BFFFFFFF"
+        android:textColor="#707bff"
+        android:backgroundTint="#707bff"
+        android:fontFamily="@font/lexend_semibold"
+        android:textSize="40sp"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#707bff"
+        android:fontFamily="@font/lexend_semibold"
+        android:hint="Digite seu sobrenome"
+        android:paddingBottom="16dp"
+        android:textColor="#707bff"
+        android:textColorHint="#BFFFFFFF"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="327dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#707bff"
+        android:fontFamily="@font/lexend_semibold"
+        android:hint="Digite seu celular"
+        android:inputType="phone"
+        android:textColor="#707bff"
+        android:textColorHint="#BFFFFFFF"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#707bff"
+        android:fontFamily="@font/lexend_semibold"
+        android:hint="Digite seu email"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="16dp"
+        android:textColor="#707bff"
+        android:textColorHint="#BFFFFFFF"
+        android:textSize="40sp" />
+
