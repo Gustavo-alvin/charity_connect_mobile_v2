@@ -5,9 +5,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#161B22">
@@ -50,7 +48,7 @@
         app:circularflow_radiusInDP="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogo" />
 
     <!-- CardView com itens divididos lado a lado -->
     <androidx.cardview.widget.CardView
@@ -215,10 +213,12 @@
                     android:id="@+id/image_view_4"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:layout_marginTop="4dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ongs_08"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@drawable/ongs_08"
@@ -232,6 +232,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/image_view_4" />
 
