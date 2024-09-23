@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="119dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
             android:padding="5dp"
             android:shadowRadius="50"
@@ -72,7 +72,7 @@
         android:id="@+id/faleconosco"
         android:layout_width="240dp"
         android:layout_height="60dp"
-        android:layout_marginLeft="105dp"
+        android:layout_marginLeft="90dp"
         android:layout_marginTop="1790dp"
         android:text="Fale Conosco"
         android:textAlignment="textEnd"
@@ -83,7 +83,7 @@
         android:id="@+id/bate_papo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="110dp"
         android:layout_marginTop="1795dp"
         android:src="@drawable/bate_papo__1__1" />
 
@@ -91,9 +91,32 @@
         android:id="@+id/interrogacao"
         android:layout_width="40dp"
         android:layout_height="23dp"
-        android:layout_marginLeft="125dp"
+        android:layout_marginLeft="115dp"
         android:layout_marginTop="1807dp"
         android:src="@drawable/resource__" />
+
+    <TextView
+        android:id="@+id/ajuda"
+        android:layout_width="wrap_content"
+        android:layout_height="119dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="1730dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:shadowRadius="50"
+        android:text="Precisa de mais ajuda?"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/pessoa_coracao"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="1630dp"
+        android:src="@drawable/group_4" />
 
 
 </FrameLayout>
