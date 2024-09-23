@@ -19,7 +19,7 @@
         android:id="@+id/imageminha1"
         android:layout_width="137dp"
         android:layout_height="107dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/shortlogobranca" />
 
@@ -28,29 +28,27 @@
         android:id="@+id/textmeu1"
         android:layout_width="wrap_content"
         android:layout_height="108dp"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="120dp"
         android:text="Charity Connect"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:typeface="sans" />
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="300dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="1300dp"
         app:cardBackgroundColor="#161b22">
 
-
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="119dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="15dp"
-
             android:padding="5dp"
             android:shadowRadius="50"
             android:text="Conectando Corações: Juntos pela Transformação  Bem-vindo à plataforma onde cada gesto conta.  "
@@ -58,18 +56,45 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
-
     </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imagemeu2"
-        android:layout_width="412dp"
+        android:layout_width="427dp"
         android:layout_height="300dp"
-        android:layout_marginVertical="600dp"
+        android:layout_marginVertical="900dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:src="@drawable/blogculturadedoacao_removebg_preview" />
+
+    <Button
+        android:id="@+id/faleconosco"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="1790dp"
+        android:text="Fale Conosco"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/bate_papo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="1795dp"
+        android:src="@drawable/bate_papo__1__1" />
+
+    <ImageView
+        android:id="@+id/interrogacao"
+        android:layout_width="40dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="1807dp"
+        android:src="@drawable/resource__" />
+
 
 </FrameLayout>
 
