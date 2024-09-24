@@ -40,7 +40,7 @@
         android:textColorHint="#BFFFFFFF"
         android:textColor="#707bff"
         android:backgroundTint="#707bff"
-        android:textSize="80px"
+        android:textSize="55px"
         android:paddingBottom="16dp"/>
 
     <EditText
@@ -50,7 +50,7 @@
         android:textColorHint="#BFFFFFFF"
         android:textColor="#707bff"
         android:backgroundTint="#707bff"
-        android:textSize="80px"
+        android:textSize="55px"
         android:paddingBottom="16dp"/>
 
     <EditText
@@ -60,7 +60,7 @@
         android:textColorHint="#BFFFFFFF"
         android:textColor="#707bff"
         android:backgroundTint="#707bff"
-        android:textSize="80px"
+        android:textSize="55px"
         android:paddingBottom="16dp"/>
 
     <EditText
@@ -70,7 +70,7 @@
         android:textColorHint="#BFFFFFFF"
         android:textColor="#707bff"
         android:backgroundTint="#707bff"
-        android:textSize="80px"
+        android:textSize="55px"
         android:paddingBottom="16dp"/>
 
     <EditText
@@ -80,7 +80,7 @@
         android:textColorHint="#BFFFFFFF"
         android:textColor="#707bff"
         android:backgroundTint="#707bff"
-        android:textSize="80px"
+        android:textSize="55px"
         android:paddingBottom="16dp"/>
 
     <EditText
@@ -91,7 +91,7 @@
         android:textColor="#707bff"
         android:backgroundTint="#707bff"
         android:inputType="phone"
-        android:textSize="80px"
+        android:textSize="55px"
         android:paddingBottom="16dp"/>
 
     <Button
@@ -100,7 +100,7 @@
         android:text="Enviar"
         android:textColor="#FFFFFF"
         android:background="#707bff"
-        android:textSize="80px"
+        android:textSize="50px"
 
         android:paddingTop="12dp"
         android:paddingBottom="12dp"/>
