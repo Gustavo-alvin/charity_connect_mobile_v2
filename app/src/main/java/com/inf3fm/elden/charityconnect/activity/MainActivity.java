@@ -15,6 +15,8 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.lang.reflect.Field;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,6 +64,17 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frameConteudo, homeFragment);
                 transaction.commit();
+
+
+
+
+
+
+
+
+
+
+
             }
         });
 

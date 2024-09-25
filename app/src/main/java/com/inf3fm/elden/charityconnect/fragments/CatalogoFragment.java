@@ -1,52 +1,33 @@
 package com.inf3fm.elden.charityconnect.fragments;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
-
-
 import com.inf3fm.elden.charityconnect.R;
+import com.inf3fm.elden.charityconnect.activity.conexao;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-import java.lang.reflect.Field;
+public class CatalogoFragment extends Fragment {
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CatalogoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class CatalogoFragment extends Fragment  {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    TextView bancoTeste;
 
     public CatalogoFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CatalogoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static CatalogoFragment newInstance(String param1, String param2) {
         CatalogoFragment fragment = new CatalogoFragment();
         Bundle args = new Bundle();
@@ -59,7 +40,6 @@ public class CatalogoFragment extends Fragment  {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -70,19 +50,41 @@ public class CatalogoFragment extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View view = inflater.inflate(R.layout.fragment_catalogo, container, false);
 
+        bancoTeste = view.findViewById(R.id.bancoTeste);
+
+        // Configurando o TextView para acionar a conexão
+        bancoTeste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                conectarAoBanco();
+            }
+        });
 
         return view;
     }
 
+    private void conectarAoBanco() {
+        Connection conn = conexao.conectar(); // Certifique-se de que esta é a sua classe de conexão
+        try {
+            if (conn != null) {
+                if (!conn.isClosed())
+                    bancoTeste.setText("Conexão realizada com sucesso");
+                else
+                    bancoTeste.setText("A conexão está fechada");
+            } else {
+                bancoTeste.setText("Conexão nula, não estabelecida");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            bancoTeste.setText("Conexão falhou\n" + e.getMessage());
+        }
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-
-
+        super.onViewCreated(view, savedInstanceState);-
 
         // Encontrar o SearchView pelo ID dentro do layout do fragmento
         SearchView searchView = view.findViewById(R.id.search_view);
@@ -102,6 +104,4 @@ public class CatalogoFragment extends Fragment  {
             }
         });
     }
-
-
 }
