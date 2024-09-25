@@ -6,32 +6,44 @@
         android:fillViewport="true"
         android:background="#11161D">
 <LinearLayout
-    android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="24dp"
         android:background="#11161d" >
 
+    <ImageView
+        android:id="@+id/imageminha1"
+        android:layout_width="137dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="-30dp"
+        android:src="@drawable/shortlogobranca"
+        android:textAlignment="center" />
+
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Charity Connect"
+        android:layout_height="50dp"
         android:fontFamily="@font/lexend_semibold"
+        android:paddingBottom="10px"
+        android:text="Charity Connect"
         android:textAlignment="center"
-        android:textSize="100px"
         android:textColor="#FFFFFF"
-        android:paddingBottom="100px"/>
+        android:layout_marginTop="-20dp"
+        android:textSize="65px" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lexend_semibold"
         android:paddingBottom="24dp"
+        android:layout_marginTop="15dp"
         android:text="Formulário para Contato"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textColor="#FFFFFF"
-        android:textSize="80px" />
+        android:textSize="55px" />
 
     <EditText
         android:layout_width="match_parent"
@@ -101,7 +113,7 @@
         android:textColor="#FFFFFF"
         android:background="#707bff"
         android:textSize="50px"
-
+        android:layout_marginTop="10dp"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"/>
 </LinearLayout>
