@@ -15,26 +15,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+
         <ImageButton
             android:id="@+id/buttonHome"
             android:layout_width="135dp"
             android:layout_height="match_parent"
+            android:background="#5E5E5E"
 
-            android:src="@drawable/baseline_home_24" />
+            android:src="@drawable/casa__3_" />
 
         <ImageButton
             android:id="@+id/buttonCatalogo"
-            android:layout_width="135dp"
+            android:layout_width="139dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:src="@drawable/baseline_view_comfy_24" />
+            android:background="#5E5E5E"
+            android:src="@drawable/menu_hamburguer" />
 
         <ImageButton
             android:id="@+id/buttonMenu"
             android:layout_width="135dp"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:src="@drawable/baseline_menu_24" />
+            android:background="#5E5E5E"
+            android:src="@drawable/configuracoes" />
+
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.constraintlayout.widget.Guideline
@@ -49,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.66" />
+        app:layout_constraintGuide_percent="0.67" />
 
     <FrameLayout
         android:layout_width="409dp"

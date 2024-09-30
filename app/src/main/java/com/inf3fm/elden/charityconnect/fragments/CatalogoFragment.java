@@ -84,7 +84,7 @@ public class CatalogoFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);-
+        super.onViewCreated(view, savedInstanceState);
 
         // Encontrar o SearchView pelo ID dentro do layout do fragmento
         SearchView searchView = view.findViewById(R.id.search_view);
