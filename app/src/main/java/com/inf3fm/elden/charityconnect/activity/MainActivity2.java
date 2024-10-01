@@ -20,7 +20,7 @@ import java.time.LocalDate;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    private EditText motivo, pergunta, edtNome, sobrenome, edtEmail, telefone;
+    private EditText edtMotivo, edtPergunta, edtNome, edtSobrenome, edtEmail, edtCelular;
     private Button enviar;
 
     @Override
@@ -31,7 +31,15 @@ public class MainActivity2 extends AppCompatActivity {
 
         edtNome = findViewById(R.id.nome);
 
+        edtSobrenome = findViewById(R.id.sobrenome);
+
+        edtPergunta = findViewById(R.id.pergunta);
+
         edtEmail = findViewById(R.id.email);
+
+        edtMotivo = findViewById(R.id.motivo);
+
+        edtCelular = findViewById(R.id.celular);
 
         enviar = findViewById(R.id.enviar);
 
@@ -60,30 +68,57 @@ public class MainActivity2 extends AppCompatActivity {
                     PreparedStatement pst = conexaoBD().prepareStatement("INSERT INTO Contato (motivoContato, dataContato, pergunta, nome, sobrenome, email, telefone) VALUES (?, ?, ?,?,?,?,?)");
 
                     String nome = edtNome.getText().toString().trim();
+                    String sobrenome = edtSobrenome.getText().toString().trim();
                     String email = edtEmail.getText().toString().trim();
+                    String pergunta = edtPergunta.getText().toString().trim();
+                    String motivo = edtMotivo.getText().toString().trim();
+                    String celular = edtCelular.getText().toString().trim();
+
+                    if(motivo.isEmpty() || motivo.equals("")){
+                        Toast.makeText(getApplicationContext(), "Digite o Motivo do Contato", Toast.LENGTH_SHORT).show();
+                        edtMotivo.setFocusable(true);
+                    }else{
+                        pst.setString(1, motivo);
+                    }
+
+                    if(pergunta.isEmpty() || pergunta.equals("")){
+                        Toast.makeText(getApplicationContext(), "Digite sua pergunta", Toast.LENGTH_SHORT).show();
+                        edtPergunta.setFocusable(true);
+                    }else{
+                        pst.setString(3, pergunta);
+                    }
 
                     if(nome.isEmpty() || nome.equals("")){
-                        Toast.makeText(getApplicationContext(), "INSIRA UM NOME", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Digite seu nome", Toast.LENGTH_SHORT).show();
                         edtNome.setFocusable(true);
                     }else{
                         pst.setString(4, nome);
                     }
 
+                    if(sobrenome.isEmpty() || sobrenome.equals("")){
+                        Toast.makeText(getApplicationContext(), "Digite seu sobrenome", Toast.LENGTH_SHORT).show();
+                        edtSobrenome.setFocusable(true);
+                    }else{
+                        pst.setString(5, sobrenome);
+                    }
 
                     if(email.isEmpty() || email.equals("")){
-                        Toast.makeText(getApplicationContext(), "INSIRA SEU EMAIL", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Digite seu email", Toast.LENGTH_SHORT).show();
                         edtEmail.setFocusable(true);
                     }else{
                         pst.setString(6, email);
                     }
 
-                    pst.setString(1, "teste do motivo");
+                    if(celular.isEmpty() || celular.equals("")){
+                        Toast.makeText(getApplicationContext(), "Digite seu celular", Toast.LENGTH_SHORT).show();
+                        edtCelular.setFocusable(true);
+                    }else{
+                        pst.setString(7, celular);
+                    }
+
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         pst.setString(2, LocalDate.now().toString());
                     }
-                    pst.setString(3, "pergunta teste de celula");
-                    pst.setString(5, "sobrenome do celular");
-                    pst.setString(7, "telefone");
 
                     pst.executeUpdate();
                     Toast.makeText(getApplicationContext(),"USUARIO INSERIDO COM SUCESSO", Toast.LENGTH_SHORT).show();

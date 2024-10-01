@@ -50,6 +50,28 @@
 
 
         <EditText
+            android:id="@+id/motivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o motivo do contato"
+            android:textColorHint="#BFFFFFFF"
+            android:textColor="#707bff"
+            android:backgroundTint="#707bff"
+            android:textSize="55px"
+            android:paddingBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/pergunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite sua pergunta"
+            android:textColorHint="#BFFFFFFF"
+            android:textColor="#707bff"
+            android:backgroundTint="#707bff"
+            android:textSize="55px"
+            android:paddingBottom="16dp"/>
+
+        <EditText
             android:id="@+id/nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +82,16 @@
             android:textSize="55px"
             android:paddingBottom="16dp"/>
 
-
+        <EditText
+            android:id="@+id/sobrenome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu sobrenome"
+            android:textColorHint="#BFFFFFFF"
+            android:textColor="#707bff"
+            android:backgroundTint="#707bff"
+            android:textSize="55px"
+            android:paddingBottom="16dp"/>
 
         <EditText
             android:id="@+id/email"
@@ -70,6 +101,18 @@
             android:textColorHint="#BFFFFFFF"
             android:textColor="#707bff"
             android:backgroundTint="#707bff"
+            android:textSize="55px"
+            android:paddingBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/celular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu celular"
+            android:textColorHint="#BFFFFFFF"
+            android:textColor="#707bff"
+            android:backgroundTint="#707bff"
+            android:inputType="phone"
             android:textSize="55px"
             android:paddingBottom="16dp"/>
 
