@@ -20,7 +20,7 @@ import java.time.LocalDate;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    private EditText motivo, pergunta, edtNome, sobrenome, edtEmail, telefone;
+    private EditText motivo, edtPergunta, edtNome, sobrenome, edtEmail, telefone;
     private Button enviar;
 
     @Override
@@ -30,6 +30,8 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         edtNome = findViewById(R.id.nome);
+
+        edtPergunta = findViewById(R.id.pergunta);
 
         edtEmail = findViewById(R.id.email);
 
@@ -61,6 +63,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                     String nome = edtNome.getText().toString().trim();
                     String email = edtEmail.getText().toString().trim();
+                    String pergunta = edtPergunta.getText().toString().trim();
 
                     if(nome.isEmpty() || nome.equals("")){
                         Toast.makeText(getApplicationContext(), "INSIRA UM NOME", Toast.LENGTH_SHORT).show();
