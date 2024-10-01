@@ -2,6 +2,8 @@ package com.inf3fm.elden.charityconnect.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +23,8 @@ import java.sql.SQLException;
 public class MainActivity extends AppCompatActivity {
 
     private ImageButton buttonHome, buttonCatalogo, buttonMenu;
+
+    private Button buttonFaleConosco;
     private HomeFragment homeFragment;
     private CatalogoFragment catalogoFragment;
     private MenuFragment menuFragment;
@@ -38,6 +42,22 @@ public class MainActivity extends AppCompatActivity {
         buttonHome = findViewById(R.id.buttonHome);
         buttonCatalogo = findViewById(R.id.buttonCatalogo);
         buttonMenu = findViewById(R.id.buttonMenu);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         homeFragment = new HomeFragment();
 

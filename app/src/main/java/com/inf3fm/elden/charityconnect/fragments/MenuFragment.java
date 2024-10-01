@@ -1,5 +1,6 @@
 package com.inf3fm.elden.charityconnect.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.inf3fm.elden.charityconnect.R;
+import com.inf3fm.elden.charityconnect.activity.MainActivity2;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +19,8 @@ import com.inf3fm.elden.charityconnect.R;
  * create an instance of this fragment.
  */
 public class MenuFragment extends Fragment {
+
+    private Button buttonFale;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +66,18 @@ public class MenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+
+        buttonFale = view.findViewById(R.id.buttonFale);
+
+        buttonFale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getActivity(), MainActivity2.class);
+                startActivity(it);
+            }
+        });
+
+        return view;
     }
 }

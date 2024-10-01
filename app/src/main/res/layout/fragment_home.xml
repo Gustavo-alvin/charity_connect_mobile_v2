@@ -73,7 +73,7 @@
         android:src="@drawable/blogculturadedoacao_removebg_preview" />
 
     <Button
-        android:id="@+id/faleconosco"
+        android:id="@+id/teste"
         android:layout_width="240dp"
         android:layout_height="60dp"
         android:layout_marginLeft="105dp"

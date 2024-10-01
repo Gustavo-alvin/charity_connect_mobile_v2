@@ -54,13 +54,14 @@
             android:elevation="4dp"
             app:cardCornerRadius="8dp"> <!-- Preto com 50% de opacidade -->
 
-            <TextView
+            <Button
+                android:id="@+id/buttonFale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="Fale Conosco"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp" />
+                android:textSize="16sp"></Button>
 
         </androidx.cardview.widget.CardView>
 
