@@ -28,7 +28,7 @@
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="12dp" />
 
         <ImageView
             android:id="@+id/imagem_ong"
@@ -55,11 +55,11 @@
             android:text="Sorrisos do Amanhã é uma ONG que arrecada fundos para apoiar crianças e jovens em vulnerabilidade. Nossa missão é proporcionar acesso à educação e saúde, transformando vidas e construindo um futuro melhor. Junte-se a nós e faça a diferença!"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
+            android:fontFamily="@font/lexend_light"
             android:textSize="14sp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- Informações da ONG -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,13 +69,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="10sp"
                 android:layout_marginTop="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NOME DA ORGANIZAÇÃO:"
+                    android:text="NOME DA \nORGANIZAÇÃO:"
                     android:textColor="#707bff"
+                    android:fontFamily="@font/lexend_light"
                     android:textSize="14sp" />
 
                 <TextView
@@ -83,6 +85,9 @@
                     android:layout_height="wrap_content"
                     android:text=" Sorrisos do Amanhã"
                     android:textColor="#FFFFFF"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/lexend_light"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -90,20 +95,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="10sp"
                 android:layout_marginTop="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NOME DO REPRESENTANTE:"
+                    android:text="NOME DO \nREPRESENTANTE:"
                     android:textColor="#707bff"
+                    android:fontFamily="@font/lexend_light"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" Caú Santana"
+                    android:text=" Caua Santana"
                     android:textColor="#FFFFFF"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/lexend_light"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -111,12 +121,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:fontFamily="@font/lexend_light"
+                android:layout_marginBottom="10sp"
                 android:layout_marginTop="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EMAIL DA ORGANIZAÇÃO:"
+                    android:text="EMAIL DA \nORGANIZAÇÃO:"
+                    android:fontFamily="@font/lexend_light"
                     android:textColor="#707bff"
                     android:textSize="14sp" />
 
@@ -125,6 +138,9 @@
                     android:layout_height="wrap_content"
                     android:text=" emostalook@gmail.com"
                     android:textColor="#FFFFFF"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/lexend_light"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -132,12 +148,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:fontFamily="@font/lexend_light"
+                android:layout_marginBottom="10sp"
                 android:layout_marginTop="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NÚMERO DE CELULAR:"
+                    android:text="NÚMERO DE \nCELULAR:"
+                    android:fontFamily="@font/lexend_light"
                     android:textColor="#707bff"
                     android:textSize="14sp" />
 
@@ -146,6 +165,9 @@
                     android:layout_height="wrap_content"
                     android:text=" (xx)xxxxx-xxxx"
                     android:textColor="#FFFFFF"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/lexend_light"
                     android:textSize="14sp" />
             </LinearLayout>
 
