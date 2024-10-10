@@ -39,6 +39,37 @@
         android:textStyle="bold"
         android:typeface="sans" />
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="260dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:clipToPadding="false" />
+
+    <!-- Botões de navegação do carrossel -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="570dp">
+
+        <Button
+            android:id="@+id/buttonPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anterior" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Próximo" />
+    </LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"

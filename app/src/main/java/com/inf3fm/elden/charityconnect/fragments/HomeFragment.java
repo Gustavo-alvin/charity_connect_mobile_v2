@@ -12,6 +12,19 @@ import android.widget.Button;
 
 import com.inf3fm.elden.charityconnect.R;
 import com.inf3fm.elden.charityconnect.activity.MainActivity2;
+import com.inf3fm.elden.charityconnect.adapters.HomeAdapter;
+import com.inf3fm.elden.charityconnect.models.HomeItem;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +34,9 @@ import com.inf3fm.elden.charityconnect.activity.MainActivity2;
 public class HomeFragment extends Fragment {
 
     private Button buttonFaleConosco;
+    private ViewPager2 viewPager;
+    private List<HomeItem> homeItems;
+    private Button buttonNext, buttonPrevious;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,11 +79,26 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        viewPager = view.findViewById(R.id.viewPager);
+        buttonNext = view.findViewById(R.id.buttonNext);
+        buttonPrevious = view.findViewById(R.id.buttonPrevious);
         buttonFaleConosco = view.findViewById(R.id.teste);
+
+        homeItems = new ArrayList<>();
+        homeItems.add(new HomeItem(R.drawable.imagem1, "Fome.", "O Brasil retornou ao mapa da fome..."));
+        homeItems.add(new HomeItem(R.drawable.imagem2, "Abusos.", "Milhares de crianças sofrem abusos..."));
+        homeItems.add(new HomeItem(R.drawable.imagem3, "Inclusão.", "Garantimos uma vida digna para idosos..."));
+
+        HomeAdapter adapter = new HomeAdapter(homeItems, getContext());
+        viewPager.setAdapter(adapter);
+
+
+        buttonNext.setOnClickListener(v -> viewPager.setCurrentItem(viewPager.getCurrentItem() + 1));
+        buttonPrevious.setOnClickListener(v -> viewPager.setCurrentItem(viewPager.getCurrentItem() - 1));
 
         buttonFaleConosco.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,4 +112,5 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+
 }
