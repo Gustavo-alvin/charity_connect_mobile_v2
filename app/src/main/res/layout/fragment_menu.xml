@@ -6,19 +6,19 @@
     android:padding="16dp">
 
 <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
 <!-- Logo e título principal -->
 
     <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:src="@drawable/shortlogobranca"
-        android:scaleType="centerInside" />
+    android:id="@+id/logoImageView"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_gravity="center"
+    android:src="@drawable/shortlogobranca"
+    android:scaleType="centerInside" />
 
     <TextView
     android:id="@+id/charityTitle"
@@ -79,45 +79,45 @@ android:orientation="vertical">
     android:layout_marginStart="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FALE CONOSCO"
-        android:textColor="#707bff"
-        android:textSize="16sp"
-        android:fontFamily="@font/lexend_semibold" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="FALE CONOSCO"
+    android:textColor="#707bff"
+    android:textSize="16sp"
+    android:fontFamily="@font/lexend_semibold" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dúvidas e Sugestões"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:fontFamily="@font/lexend_light" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Dúvidas e Sugestões"
+    android:textColor="#FFFFFF"
+    android:textSize="14sp"
+    android:fontFamily="@font/lexend_light" />
 </LinearLayout>
 </LinearLayout>
 
     <!-- Sobre Nós -->
 <LinearLayout
     android:id="@+id/sobrenos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        android:background="#101219"
-        android:clickable="true"
-        android:onClick="openWebsite">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#101219"
+    android:clickable="true"
+    android:onClick="openWebsite">
 
 <ImageView
-android:layout_width="35dp"
-android:layout_height="35dp"
-android:layout_gravity="center_vertical"
-android:src="@drawable/balaodefala" />
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_gravity="center_vertical"
+    android:src="@drawable/balaodefala" />
 
 <LinearLayout
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:orientation="vertical"
-android:layout_marginStart="16dp">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="16dp">
 
 <TextView
     android:layout_width="wrap_content"
@@ -161,20 +161,20 @@ android:layout_marginStart="16dp">
     android:layout_marginStart="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WEBSITE"
-        android:textColor="#707bff"
-        android:textSize="16sp"
-        android:fontFamily="@font/lexend_semibold" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="WEBSITE"
+    android:textColor="#707bff"
+    android:textSize="16sp"
+    android:fontFamily="@font/lexend_semibold" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acesse nosso website!"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:fontFamily="@font/lexend_light" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Acesse nosso website!"
+    android:textColor="#FFFFFF"
+    android:textSize="14sp"
+    android:fontFamily="@font/lexend_light" />
 </LinearLayout>
 </LinearLayout>
 
@@ -202,74 +202,22 @@ android:layout_marginStart="16dp">
     android:layout_marginStart="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TERMOS DE USO"
-        android:textColor="#707bff"
-        android:textSize="16sp"
-        android:fontFamily="@font/lexend_semibold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regras e condições de uso"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:fontFamily="@font/lexend_light" />
-</LinearLayout>
-</LinearLayout>
-
-    <!-- Seção Preferências -->
-<TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Preferências"
+    android:text="TERMOS DE USO"
+    android:textColor="#707bff"
+    android:textSize="16sp"
+    android:fontFamily="@font/lexend_semibold" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Regras e condições de uso"
     android:textColor="#FFFFFF"
-    android:textSize="18sp"
-    android:fontFamily="@font/lexend_semibold"
-    android:layout_marginTop="16dp"
-    android:layout_marginBottom="8dp"/>
-
-    <!-- Alterar Tema -->
-<LinearLayout
-    android:id="@+id/alterartema"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:background="#15171E"
-    android:clickable="true"
-    android:onClick="alterarTema">
-
-<ImageView
-    android:layout_width="35dp"
-    android:layout_height="35dp"
-    android:layout_gravity="center_vertical"
-    android:src="@drawable/lua" />
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginStart="16dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ALTERAR TEMA"
-        android:textColor="#707bff"
-        android:textSize="16sp"
-        android:fontFamily="@font/lexend_semibold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Personalize o estilo da interface"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:fontFamily="@font/lexend_light" />
-</LinearLayout>
-</LinearLayout>
-</LinearLayout>
+    android:textSize="14sp"
+    android:fontFamily="@font/lexend_light" />
+    </LinearLayout>
+   </LinearLayout>
+  </LinearLayout>
 </ScrollView>
 

@@ -38,7 +38,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="end"
             android:background="#5E5E5E"
-            android:src="@drawable/configuracoes" />
+            android:src="@drawable/configuracoes"/>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
