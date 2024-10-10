@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.net.Uri;
 
 import com.inf3fm.elden.charityconnect.R;
 import com.inf3fm.elden.charityconnect.activity.MainActivity2;
@@ -62,22 +63,17 @@ public class MenuFragment extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+    // Função para abrir o website
+    public void openWebsite(View view) {
+        String url = "https://charity-connect-chi.vercel.app";
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
 
-        buttonFale = view.findViewById(R.id.buttonFale);
-
-        buttonFale.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it = new Intent(getActivity(), MainActivity2.class);
-                startActivity(it);
-            }
-        });
-
-        return view;
+        // Verifica se o contexto da atividade não é nulo
+        if (getActivity() != null && intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
+
+
 }

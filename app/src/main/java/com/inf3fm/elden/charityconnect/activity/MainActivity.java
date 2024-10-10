@@ -1,5 +1,4 @@
 package com.inf3fm.elden.charityconnect.activity;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -19,46 +18,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.SQLException;
-
 public class MainActivity extends AppCompatActivity {
-
     private ImageButton buttonHome, buttonCatalogo, buttonMenu;
-
     private Button buttonFaleConosco;
     private HomeFragment homeFragment;
     private CatalogoFragment catalogoFragment;
     private MenuFragment menuFragment;
-
     private SearchView searchView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
         buttonHome = findViewById(R.id.buttonHome);
         buttonCatalogo = findViewById(R.id.buttonCatalogo);
         buttonMenu = findViewById(R.id.buttonMenu);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         homeFragment = new HomeFragment();
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -75,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
            transaction.commit();
             }
         });
-
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,20 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frameConteudo, homeFragment);
                 transaction.commit();
-
-
-
-
-
-
-
-
-
-
-
             }
         });
-
         buttonMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,10 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frameConteudo, menuFragment);
                 transaction.commit();
-
             }
         });
-
     }
-
 }
