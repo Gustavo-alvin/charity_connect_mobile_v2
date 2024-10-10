@@ -57,6 +57,7 @@ android:orientation="vertical">
 
 <!-- Fale Conosco -->
 <LinearLayout
+    android:id="@+id/faleconosco"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -97,6 +98,7 @@ android:orientation="vertical">
 
     <!-- Sobre Nós -->
 <LinearLayout
+    android:id="@+id/sobrenos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -137,13 +139,14 @@ android:layout_marginStart="16dp">
 
     <!-- Website -->
 <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:padding="8dp"
-android:background="#15171E"
-android:clickable="true"
-android:onClick="openWebsite">
+    android:id="@+id/website"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#15171E"
+    android:clickable="true"
+    android:onClick="openWebsite">
 
 <ImageView
     android:layout_width="35dp"
@@ -177,13 +180,14 @@ android:onClick="openWebsite">
 
     <!-- Termos de Uso -->
 <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:padding="8dp"
-android:background="#101219"
-android:clickable="true"
-android:onClick="openTerms">
+    android:id="@+id/termosdeuso"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#101219"
+    android:clickable="true"
+    android:onClick="openTerms">
 
 <ImageView
     android:layout_width="35dp"
@@ -217,24 +221,25 @@ android:onClick="openTerms">
 
     <!-- Seção Preferências -->
 <TextView
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Preferências"
-android:textColor="#FFFFFF"
-android:textSize="18sp"
-android:fontFamily="@font/lexend_semibold"
-android:layout_marginTop="16dp"
-android:layout_marginBottom="8dp"/>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Preferências"
+    android:textColor="#FFFFFF"
+    android:textSize="18sp"
+    android:fontFamily="@font/lexend_semibold"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"/>
 
     <!-- Alterar Tema -->
 <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:padding="8dp"
-android:background="#15171E"
-android:clickable="true"
-android:onClick="alterarTema">
+    android:id="@+id/alterartema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#15171E"
+    android:clickable="true"
+    android:onClick="alterarTema">
 
 <ImageView
     android:layout_width="35dp"
