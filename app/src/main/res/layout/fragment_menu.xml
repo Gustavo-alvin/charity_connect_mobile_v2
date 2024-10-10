@@ -1,145 +1,270 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#161B22"
-    tools:context=".fragments.MenuFragment">
+    android:background="#101219"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/titulo_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Menu"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Logo do aplicativo -->
-
-    
+<!-- Logo e título principal -->
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="70dp"
+        android:id="@+id/logoImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
         android:src="@drawable/shortlogobranca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo_menu"
-        tools:src="@drawable/shortlogobranca" />
+        android:scaleType="centerInside" />
 
-    <LinearLayout
+    <TextView
+    android:id="@+id/charityTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="Charity Connect"
+    android:textColor="#FFFFFF"
+    android:textSize="24sp"
+    android:fontFamily="@font/lexend_semibold" />
+
+<!-- Configurações -->
+<TextView
+    android:id="@+id/configTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:text="Configurações"
+    android:textColor="#FFFFFF"
+    android:textSize="20sp"
+    android:fontFamily="@font/lexend_semibold"
+    android:layout_gravity="center" />
+
+<!-- Seções de Configuração -->
+
+<!-- Seção Geral -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Geral"
+    android:textColor="#FFFFFF"
+    android:textSize="18sp"
+    android:fontFamily="@font/lexend_semibold"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"/>
+
+<!-- Fale Conosco -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#15171E"
+    android:clickable="true"
+    android:onClick="activity_main2">
+
+<ImageView
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_gravity="center_vertical"
+    android:src="@drawable/batepapo" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FALE CONOSCO"
+        android:textColor="#707bff"
+        android:textSize="16sp"
+        android:fontFamily="@font/lexend_semibold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dúvidas e Sugestões"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/lexend_light" />
+</LinearLayout>
+</LinearLayout>
+
+    <!-- Sobre Nós -->
+<LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
-        android:background="#161B22"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".MenuFragment">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#101219"
+        android:clickable="true"
+        android:onClick="openWebsite">
 
-        <!-- Card 1 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#80000000"
-            android:elevation="4dp"
-            app:cardCornerRadius="8dp"> <!-- Preto com 50% de opacidade -->
+<ImageView
+android:layout_width="35dp"
+android:layout_height="35dp"
+android:layout_gravity="center_vertical"
+android:src="@drawable/balaodefala" />
 
-            <Button
-                android:id="@+id/buttonFale"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Fale Conosco"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"></Button>
+<LinearLayout
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginStart="16dp">
 
-        </androidx.cardview.widget.CardView>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SOBRE NÓS"
+    android:textColor="#707bff"
+    android:textSize="16sp"
+    android:fontFamily="@font/lexend_semibold" />
 
-        <!-- Card 2 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#80000000"
-            android:elevation="4dp"
-            app:cardCornerRadius="8dp"> <!-- Preto com 50% de opacidade -->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Sobre Nós"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-        </androidx.cardview.widget.CardView>
-
-        <!-- Card 3 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#80000000"
-            android:elevation="4dp"
-            app:cardCornerRadius="8dp"> <!-- Preto com 50% de opacidade -->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Alterar Tema"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#80000000"
-            android:elevation="4dp"
-            app:cardCornerRadius="8dp"> <!-- Preto com 50% de opacidade -->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Website"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#80000000"
-            android:elevation="4dp"
-            app:cardCornerRadius="8dp"> <!-- Preto com 50% de opacidade -->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Termos de Uso"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-        </androidx.cardview.widget.CardView>
-
-
-        <!-- Adicione mais cards conforme necessário -->
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Conheça nosso projeto!"
+    android:textColor="#FFFFFF"
+    android:textSize="14sp"
+    android:fontFamily="@font/lexend_light" />
+</LinearLayout>
     </LinearLayout>
 
+    <!-- Website -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="8dp"
+android:background="#15171E"
+android:clickable="true"
+android:onClick="openWebsite">
 
-</FrameLayout>
+<ImageView
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_gravity="center_vertical"
+    android:src="@drawable/website" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WEBSITE"
+        android:textColor="#707bff"
+        android:textSize="16sp"
+        android:fontFamily="@font/lexend_semibold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acesse nosso website!"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/lexend_light" />
+</LinearLayout>
+</LinearLayout>
+
+    <!-- Termos de Uso -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="8dp"
+android:background="#101219"
+android:clickable="true"
+android:onClick="openTerms">
+
+<ImageView
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_gravity="center_vertical"
+    android:src="@drawable/notas" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TERMOS DE USO"
+        android:textColor="#707bff"
+        android:textSize="16sp"
+        android:fontFamily="@font/lexend_semibold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regras e condições de uso"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/lexend_light" />
+</LinearLayout>
+</LinearLayout>
+
+    <!-- Seção Preferências -->
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Preferências"
+android:textColor="#FFFFFF"
+android:textSize="18sp"
+android:fontFamily="@font/lexend_semibold"
+android:layout_marginTop="16dp"
+android:layout_marginBottom="8dp"/>
+
+    <!-- Alterar Tema -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="8dp"
+android:background="#15171E"
+android:clickable="true"
+android:onClick="alterarTema">
+
+<ImageView
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_gravity="center_vertical"
+    android:src="@drawable/lua" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALTERAR TEMA"
+        android:textColor="#707bff"
+        android:textSize="16sp"
+        android:fontFamily="@font/lexend_semibold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Personalize o estilo da interface"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/lexend_light" />
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>
+</ScrollView>
 
