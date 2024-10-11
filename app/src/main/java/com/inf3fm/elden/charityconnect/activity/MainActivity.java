@@ -63,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 menuFragment = new MenuFragment();
-
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frameConteudo, menuFragment);
                 transaction.commit();
             }
         });
+
     }
 }
