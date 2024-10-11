@@ -14,21 +14,13 @@ import android.net.Uri;
 import com.inf3fm.elden.charityconnect.R;
 import com.inf3fm.elden.charityconnect.activity.MainActivity2;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MenuFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MenuFragment extends Fragment {
 
     private Button buttonFale;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -36,15 +28,6 @@ public class MenuFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MenuFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static MenuFragment newInstance(String param1, String param2) {
         MenuFragment fragment = new MenuFragment();
         Bundle args = new Bundle();
@@ -63,17 +46,71 @@ public class MenuFragment extends Fragment {
         }
     }
 
-    // Função para abrir o website
-    public void openWebsite(View view) {
-        String url = "https://charity-connect-chi.vercel.app";
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(url));
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
-        // Verifica se o contexto da atividade não é nulo
-        if (getActivity() != null && intent.resolveActivity(getActivity().getPackageManager()) != null) {
-            startActivity(intent);
-        }
+        // Configurando o clique no botão "Fale Conosco"
+        View faleConosco = view.findViewById(R.id.faleconosco);
+        faleConosco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFaleConosco();
+            }
+        });
+
+        // Configurando o clique no botão "Sobre Nós"
+        View sobreNos = view.findViewById(R.id.sobrenos);
+        sobreNos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSobre(); // Chama openSobre
+            }
+        });
+
+        // Configurando o clique no botão "Website"
+        View website = view.findViewById(R.id.website);
+        website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWebsite();
+            }
+        });
+
+        // Configurando o clique no botão "Termos de Uso"
+        View termosDeUso = view.findViewById(R.id.termosdeuso);
+        termosDeUso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTerms();
+            }
+        });
+
+        return view;
     }
 
+    private void openFaleConosco() {
+        // Aqui você pode definir a lógica para abrir a tela "Fale Conosco"
+        Intent intent = new Intent(getActivity(), MainActivity2.class);
+        intent.putExtra("action", "fale_conosco"); // Passando a ação
+        startActivity(intent); // Iniciando a nova atividade
+    }
 
+    private void openWebsite() {
+        // Aqui você pode definir a lógica para abrir o site
+        String url = "https://charity-connect-chi.vercel.app"; // URL do site
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent); // Iniciando o navegador
+    }
+
+    private void openTerms() {
+        String url = "https://charity-connect-chi.vercel.app/termos"; // URL do site
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent); // Iniciando o navegador
+    }
+    private void openSobre() {
+        String url = "https://charity-connect-chi.vercel.app/sobre"; // URL do site
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent); // Iniciando o navegador
+    }
 }
