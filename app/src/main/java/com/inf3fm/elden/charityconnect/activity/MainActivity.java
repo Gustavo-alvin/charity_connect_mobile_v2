@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+
+import com.inf3fm.elden.charityconnect.fragment.ProdutoFragment.OnListFragmentInteractionListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.inf3fm.elden.charityconnect.R;
 import com.inf3fm.elden.charityconnect.fragments.CatalogoFragment;
 import com.inf3fm.elden.charityconnect.fragments.HomeFragment;
@@ -18,13 +22,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.SQLException;
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+       implements ProdutoFragment.OnListFragmentInteractionListener {
+
+    private TextView mTextMessage;
+
     private ImageButton buttonHome, buttonCatalogo, buttonMenu;
     private Button buttonFaleConosco;
     private HomeFragment homeFragment;
     private CatalogoFragment catalogoFragment;
     private MenuFragment menuFragment;
     private SearchView searchView;
+
+   private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectListener = (item ) ->{
+
+           switch (item.getItemId()){
+               case R.id.navegation_home:
+                   mTextMessage.setText("Home");
+                   return true;
+               case R.id.navegation_produtos:
+                   mTextMessage.setText(R.string.title_produtos);
+                   FragmentTransaction  ft = getSupportFragmentManager() .beginTransaction();
+                   ft.replace(R.id.fragment_container, new ProdutoFragment())
+                           .addToBackStack(null)
+                           .commit();
+                   return true;
+           }
+   };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +87,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 menuFragment = new MenuFragment();
-
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frameConteudo, menuFragment);
                 transaction.commit();
             }
         });
+
     }
 }

@@ -35,16 +35,6 @@ public class MenuFragment extends Fragment {
     public MenuFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MenuFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static MenuFragment newInstance(String param1, String param2) {
         MenuFragment fragment = new MenuFragment();
         Bundle args = new Bundle();
@@ -63,13 +53,18 @@ public class MenuFragment extends Fragment {
         }
     }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_menu, container, false);
+    }
+
     // Função para abrir o website
     public void openWebsite(View view) {
         String url = "https://charity-connect-chi.vercel.app";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
 
-        // Verifica se o contexto da atividade não é nulo
         if (getActivity() != null && intent.resolveActivity(getActivity().getPackageManager()) != null) {
             startActivity(intent);
         }
