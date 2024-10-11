@@ -104,7 +104,7 @@
             android:padding="8dp"
             android:background="#101219"
             android:clickable="true"
-            android:onClick="openWebsite">
+            android:onClick="openSobre">
 
             <ImageView
                 android:layout_width="35dp"

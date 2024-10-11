@@ -64,7 +64,7 @@ public class MenuFragment extends Fragment {
         sobreNos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openWebsite();
+                openSobre(); // Chama openSobre
             }
         });
 
@@ -104,9 +104,13 @@ public class MenuFragment extends Fragment {
     }
 
     private void openTerms() {
-        // Aqui você pode definir a lógica para abrir os Termos de Uso
-        Intent intent = new Intent(getActivity(), MainActivity2.class);
-        intent.putExtra("action", "termos_de_uso");
-        startActivity(intent);
+        String url = "https://charity-connect-chi.vercel.app/termos"; // URL do site
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent); // Iniciando o navegador
+    }
+    private void openSobre() {
+        String url = "https://charity-connect-chi.vercel.app/sobre"; // URL do site
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent); // Iniciando o navegador
     }
 }
