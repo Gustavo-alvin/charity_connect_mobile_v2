@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
 import com.inf3fm.elden.charityconnect.R;
-import com.inf3fm.elden.charityconnect.activity.conexao;
+import com.inf3fm.elden.charityconnect.activity.Conexao;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -66,7 +66,7 @@ public class CatalogoFragment extends Fragment {
     }
 
     private void conectarAoBanco() {
-        Connection conn = conexao.conectar(); // Certifique-se de que esta é a sua classe de conexão
+        Connection conn = Conexao.conectar(); // Certifique-se de que esta é a sua classe de conexão
         try {
             if (conn != null) {
                 if (!conn.isClosed())

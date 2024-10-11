@@ -15,30 +15,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="fill_horizontal"
+            android:orientation="horizontal"
 
-        <ImageButton
-            android:id="@+id/buttonHome"
-            android:layout_width="135dp"
-            android:layout_height="match_parent"
-            android:background="#5E5E5E"
+            >
 
-            android:src="@drawable/casa__3_" />
+            <ImageButton
+                android:id="@+id/buttonHome"
+                android:layout_width="110dp"
+                android:layout_height="59dp"
+                android:background="#5E5E5E"
+                android:src="@drawable/casa__3_" />
 
-        <ImageButton
-            android:id="@+id/buttonCatalogo"
-            android:layout_width="139dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:background="#5E5E5E"
-            android:src="@drawable/menu_hamburguer" />
+            <ImageButton
+                android:id="@+id/buttonCatalogo"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#5E5E5E"
+                android:src="@drawable/menu_hamburguer" />
 
-        <ImageButton
-            android:id="@+id/buttonMenu"
-            android:layout_width="135dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="#5E5E5E"
-            android:src="@drawable/configuracoes" />
+            <ImageButton
+                android:id="@+id/buttonMenu"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="#5E5E5E"
+                android:src="@drawable/configuracoes" />
+
+            <ImageButton
+                android:id="@+id/buttonProduto"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="#5E5E5E"
+                android:src="@drawable/aplicativos" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
@@ -47,14 +67,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.33" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.67" />
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 
     <FrameLayout
         android:layout_width="409dp"

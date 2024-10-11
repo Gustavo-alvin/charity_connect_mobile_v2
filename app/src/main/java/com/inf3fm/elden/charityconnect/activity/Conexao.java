@@ -2,13 +2,11 @@ package com.inf3fm.elden.charityconnect.activity;
 
 import android.os.StrictMode;
 
-import net.sourceforge.jtds.jdbc.Driver;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class conexao {
+public class Conexao {
     public static Connection conectar () {
         Connection conn = null;
         try {
