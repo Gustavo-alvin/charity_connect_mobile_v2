@@ -1,5 +1,6 @@
 package com.inf3fm.elden.charityconnect.activity;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -34,7 +35,8 @@ public class MyProdutoRecyclerViewAdapter extends RecyclerView.Adapter<MyProduto
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
+      //
+        holder.mIdView.setTextDirection(Integer.parseInt(mValues.get(position).id));
         holder.mContentView.setText(mValues.get(position).content);
     }
 
@@ -44,14 +46,17 @@ public class MyProdutoRecyclerViewAdapter extends RecyclerView.Adapter<MyProduto
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
+        public final AppCompatImageView mIdView;
         public final TextView mContentView;
         public PlaceholderItem mItem;
 
         public ViewHolder(FragmentProdutoBinding binding) {
             super(binding.getRoot());
-            mIdView = binding.itemNumber;
-            mContentView = binding.content;
+          //  mIdView = binding.itemNumber;
+         //   mContentView = binding.content;
+            mIdView = binding.imagemOng;
+            mContentView = binding.nomeOng;
+
         }
 
         @Override
