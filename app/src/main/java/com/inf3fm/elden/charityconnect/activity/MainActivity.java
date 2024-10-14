@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         buttonHome = findViewById(R.id.buttonHome);
         buttonCatalogo = findViewById(R.id.buttonCatalogo);
         buttonMenu = findViewById(R.id.buttonMenu);
-        buttonProduto = findViewById(R.id.buttonProduto);
+      //  buttonProduto = findViewById(R.id.buttonProduto);
 
         homeFragment = new HomeFragment();
 
