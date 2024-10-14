@@ -19,7 +19,7 @@
         android:id="@+id/imageminha1"
         android:layout_width="137dp"
         android:layout_height="107dp"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="150dp"
         android:textAlignment="center"
         android:layout_marginTop="20dp"
         android:src="@drawable/shortlogobranca" />
@@ -44,45 +44,66 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="324dp"
+        android:layout_height="361dp"
         android:layout_marginTop="260dp"
         android:clipToPadding="false"
         android:paddingStart="40dp"
         android:paddingEnd="40dp" />
 
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
+        android:layout_height="74dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="570dp">
+        android:layout_marginTop="640dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/buttonPrevious"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Anterior" />
 
         <Button
             android:id="@+id/buttonNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Próximo" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/BemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="800dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:shadowRadius="50"
+        android:text="Bem Vindos !"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="100px"
+        android:textStyle="bold" />
+
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="1300dp"
+        android:layout_marginTop="1205dp"
         app:cardBackgroundColor="#161b22">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="331dp"
+            android:layout_height="300dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="-50dp"
+            android:layout_marginTop="-5dp"
             android:layout_marginRight="15dp"
             android:padding="5dp"
             android:shadowRadius="50"
@@ -97,19 +118,19 @@
     <ImageView
         android:id="@+id/imagemeu2"
         android:layout_width="wrap_content"
-        android:layout_height="290dp"
+        android:layout_height="276dp"
         android:layout_marginVertical="900dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-25dp"
         android:src="@drawable/blogculturadedoacao_removebg_preview" />
 
     <Button
         android:id="@+id/teste"
         android:layout_width="240dp"
         android:layout_height="60dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="1790dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="1800dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold" />
@@ -119,8 +140,8 @@
         android:id="@+id/faleconosco"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="1800dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="1810dp"
         android:text="Fale Conosco"
         android:textColor="#FFFFFF"
         android:textSize="70px"
@@ -130,23 +151,23 @@
         android:id="@+id/bate_papo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="94dp"
-        android:layout_marginTop="1795dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="1805dp"
         android:src="@drawable/bate_papo__1__1" />
 
     <ImageView
         android:id="@+id/interrogacao"
         android:layout_width="37dp"
         android:layout_height="18dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="1807dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="1818dp"
         android:src="@drawable/resource__" />
 
     <TextView
         android:id="@+id/ajuda"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
-        android:layout_marginLeft="88dp"
+        android:layout_marginLeft="100dp"
         android:textAlignment="center"
         android:layout_marginTop="1730dp"
         android:layout_marginRight="15dp"
@@ -161,7 +182,7 @@
         android:id="@+id/pessoa_coracao"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="160dp"
+        android:layout_marginLeft="170dp"
         android:textAlignment="center"
         android:layout_marginTop="1630dp"
         android:src="@drawable/group_4" />
