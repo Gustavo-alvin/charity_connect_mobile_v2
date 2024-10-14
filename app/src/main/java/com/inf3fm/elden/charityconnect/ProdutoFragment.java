@@ -100,15 +100,15 @@ public class ProdutoFragment extends Fragment {
     public List<ONG> pesquisarONGs() {
         List<ONG> listaONGs = new ArrayList<>();
         try {
-            PreparedStatement pst = conexaoBD().prepareStatement("select id, nome, nomeRep, email, telefone, cep, uf, foto from ONG");
+            PreparedStatement pst = conexaoBD().prepareStatement("select id, nome, nomeRep, email, telefone, descAtuacao, cep, uf, foto from ONG");
 
             ResultSet res = pst.executeQuery();
 
             while (res.next()) {
                 listaONGs.add(new ONG(
                         res.getLong(1),
-                        res.getString(2),
-                        res.getBytes(8)
+                        res.getString(6),
+                        res.getBytes(9)
                 ));
             }
 
